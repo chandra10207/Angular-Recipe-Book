@@ -7,7 +7,7 @@ import { Recipe } from '../recipe.modal';
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
-  recipe:Recipe = [];
+  // recipe:Recipe = [];
 
   constructor() { }
 

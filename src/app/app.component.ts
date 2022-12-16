@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularRecepieBook';
+  activeState = 'recipe';
+
+
+  getCurrentState($event:string){
+    this.activeState = $event;
+    console.log(this.activeState);
+  }
 }
