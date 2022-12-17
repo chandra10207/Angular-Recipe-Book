@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { Recipe } from '../recipe.modal';
 
 @Component({
@@ -8,6 +8,8 @@ import { Recipe } from '../recipe.modal';
 })
 
 export class RecipeListComponent implements OnInit {
+
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
   
   recipes: Recipe[] = [
     new Recipe("Recipe 1","test description 1", 'https://www.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
@@ -18,5 +20,11 @@ export class RecipeListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  OnRecipeSelected(recipe: Recipe){
+    this.recipeWasSelected.emit(recipe);
+  }
+
+ 
 
 }

@@ -1,17 +1,17 @@
-
-<a href="" class="list-group-item clearfix bg-primary row">
-    <div class="pull-left col-md-8">
-        <h4 class="list-group-item-headin">
-            {{recipe.name}}
-        </h4>
-        <p>{{recipe.description}}</p>
-    </div>
-    <div class="pull-right col-md-4">
-        <img 
-        [src]="recipe.imagePath"
-        class="img-responsive" 
-        alt="{{recipe.name}}"
-        style="max-height:50px">
-    </div>
-    
+<a href="#" class="list-group-item" (click)="onRecipeSelected()">
+    <div class="row bg-primary p-2 mb-3">
+        <div class="col-md-8">
+            <h4 class="list-group-item-headin">
+                {{recipe.name}}
+            </h4>
+            <p>{{recipe.description}}</p>
+        </div>
+        <div class=" col-md-4">
+            <img 
+            [src]="recipe.imagePath"
+            class="img-responsive img-circle" 
+            alt="{{recipe.name}}"
+            style="max-height:50px">
+        </div>
+    </div> 
 </a>
