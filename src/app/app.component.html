@@ -52,7 +52,19 @@
 
       </ng-template>
 
-      <div *ngIf="!onlyOdd">
+      <!-- <div *ngIf="!onlyOdd">
+        <li class="list-group-item"
+        [ngClass]="{even_class: even % 2 == 0}"
+        [ngStyle]="{backgroundColor: even %2 == 0 ? 'green' : 'transparent'}"
+        *ngFor="let even of evenNumbers"
+        >
+        {{even}}
+        </li>
+      </div> -->
+
+
+
+      <div *appUnless="onlyOdd">
         <li class="list-group-item"
         [ngClass]="{even_class: even % 2 == 0}"
         [ngStyle]="{backgroundColor: even %2 == 0 ? 'green' : 'transparent'}"
@@ -61,12 +73,24 @@
         {{even}}
         </li>
       </div>
+
+
        
       </ul>
     </div>
 
     <p appBasicHighlight>Style me with basic directive</p>
     <p appBetterHighlight>Style me with better directive</p>
+
+    <div [ngSwitch]="switchValue">
+      <p *ngSwitchCase="5"> Value 5</p>
+      <p *ngSwitchCase="25"> Value 25</p>
+      <p *ngSwitchCase="35"> Value 35</p>
+      <p *ngSwitchCase="45"> Value 45</p>
+      <p *ngSwitchDefault> Value default</p>
+      
+
+    </div>
 
 
   </div>
