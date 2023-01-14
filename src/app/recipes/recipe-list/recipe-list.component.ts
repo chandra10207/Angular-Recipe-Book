@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { Recipe } from '../recipe.modal';
+import {RecipeService} from "../recipe.service";
 
 @Component({
   selector: 'app-recipe-list',
@@ -10,21 +11,19 @@ import { Recipe } from '../recipe.modal';
 export class RecipeListComponent implements OnInit {
 
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
-  
-  recipes: Recipe[] = [
-    new Recipe("Recipe 1","test description 1", 'https://www.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg'),
-    new Recipe("Recipe 2","test description 2", 'https://www.shutterstock.com/image-photo/notepad-your-recipe-herbs-spices-260nw-370298699.jpg')
-  ]
+  recipes:Recipe[] = [];
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
+    this.recipes = this.recipeService.getRecipes();
+
   }
 
   OnRecipeSelected(recipe: Recipe){
     this.recipeWasSelected.emit(recipe);
   }
 
- 
+
 
 }
