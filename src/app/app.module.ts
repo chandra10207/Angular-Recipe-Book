@@ -23,6 +23,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
+import ShoppingListService from "./shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { RecipeBookComponent } from './recipe-book/recipe-book.component';
     // HttpModule,
     // AppRoutingModule
   ],
-  providers: [AccountService,LoggingService],
+  providers: [AccountService,LoggingService,ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
