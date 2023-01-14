@@ -3,9 +3,14 @@ import { LoggingService } from '../services/logging.service';
 @Component({
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
-  styleUrls: ['./new-account.component.css']
+  styleUrls: ['./new-account.component.css'],
+  providers: [LoggingService]
 })
 export class NewAccountComponent {
+
+  constructor(private loggingService: LoggingService) {
+  }
+
   @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
 
   onCreateAccount(accountName: string, accountStatus: string) {
@@ -14,7 +19,6 @@ export class NewAccountComponent {
       status: accountStatus
     });
     // console.log('A server status changed, new status: ' + accountStatus); // replaced with logging service
-    var service = new LoggingService();
-    service.logStatusChange(accountStatus)
+    this.loggingService.logStatusChange(accountStatus)
   }
 }
