@@ -5,7 +5,7 @@ import {AccountService} from "../services/account.service";
   selector: 'app-services-dependancy-injection',
   templateUrl: './services-dependancy-injection.component.html',
   styleUrls: ['./services-dependancy-injection.component.scss'],
-  providers:[LoggingService,AccountService]
+  // providers:[LoggingService]
 })
 export class ServicesDependancyInjectionComponent implements OnInit {
   accounts: {name:string, status:string}[] = [];

@@ -20,6 +20,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { ServicesDependancyInjectionComponent } from './services-dependancy-injection/services-dependancy-injection.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import {AccountService} from "./services/account.service";
+import {LoggingService} from "./services/logging.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     // HttpModule,
     // AppRoutingModule
   ],
-  providers: [],
+  providers: [AccountService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
