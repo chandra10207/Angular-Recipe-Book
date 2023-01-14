@@ -1,33 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {LoggingService} from "../services/logging.service";
+import {AccountService} from "../services/account.service";
 
 @Component({
   selector: 'app-services-dependancy-injection',
   templateUrl: './services-dependancy-injection.component.html',
   styleUrls: ['./services-dependancy-injection.component.scss'],
-  providers:[LoggingService]
+  providers:[LoggingService,AccountService]
 })
 export class ServicesDependancyInjectionComponent implements OnInit {
 
-  constructor(private loggingService: LoggingService) { }
+  accounts: {name:string, status:string}[] = [];
+
+  constructor(private loggingService: LoggingService, private accountService: AccountService) { }
 
   ngOnInit(): void {
+    this.accounts = this.accountService.accounts;
   }
-
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Testaccount',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ];
 
   onAccountAdded(newAccount: {name: string, status: string}) {
     this.accounts.push(newAccount);
@@ -38,6 +27,8 @@ export class ServicesDependancyInjectionComponent implements OnInit {
     // this.loggingService.logStatusChange(this.accounts.toString());
 
   }
+
+
 
 
 }
