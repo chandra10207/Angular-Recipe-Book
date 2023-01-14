@@ -22,6 +22,7 @@ import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
+import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {LoggingService} from "./services/logging.service";
     DropdownDirective,
     ServicesDependancyInjectionComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    RecipeBookComponent
   ],
   imports: [
     BrowserModule,

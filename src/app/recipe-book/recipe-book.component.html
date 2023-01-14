@@ -1,0 +1,12 @@
+
+<app-header (current_state)="getCurrentState($event)"></app-header>
+
+<div class="container-fluid py-4">
+  <div class="container" *ngIf="activeRecipeState == 'recipe'">
+    <app-recipes></app-recipes>
+  </div>
+
+  <div class="container" *ngIf="activeRecipeState == 'shopping_list'">
+    <app-shopping-list></app-shopping-list>
+  </div>
+</div>

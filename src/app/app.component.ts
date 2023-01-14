@@ -7,11 +7,4 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularRecepieBook';
-  activeState = 'recipe';
-
-
-  getCurrentState($event:string){
-    this.activeState = $event;
-    console.log(this.activeState);
-  }
 }
