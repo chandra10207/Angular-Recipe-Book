@@ -17,6 +17,9 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
 import { UnlessDirective } from './directives/unless.directive';
 import { DirectivesDeepDriveComponent } from './directives-deep-drive/directives-deep-drive.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ServicesDependancyInjectionComponent } from './services-dependancy-injection/services-dependancy-injection.component';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BetterHighlightDirective,
     UnlessDirective,
     DirectivesDeepDriveComponent,
-    DropdownDirective
+    DropdownDirective,
+    ServicesDependancyInjectionComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
