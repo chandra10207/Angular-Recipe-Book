@@ -6,3 +6,12 @@
 .even_class{
     color: yellow;
 }
+
+
+.dropdown.show
+{
+    color:red;
+}
+.dropdown.show .dropdown-menu{
+    display: block !important;
+}

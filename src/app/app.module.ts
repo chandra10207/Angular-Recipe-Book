@@ -16,6 +16,7 @@ import { BasicHighlightDirective } from './directives/basic-highlight.directive'
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { DirectivesDeepDriveComponent } from './directives-deep-drive/directives-deep-drive.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DirectivesDeepDriveComponent } from './directives-deep-drive/directives
     BetterHighlightDirective,
     UnlessDirective,
     DirectivesDeepDriveComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

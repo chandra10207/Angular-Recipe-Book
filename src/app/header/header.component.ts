@@ -13,10 +13,7 @@ export class HeaderComponent{
     setActiveState(state:string){
 
         this.activeState = state;
-       this.current_state.emit(this.activeState);
-
-
-
+        this.current_state.emit(this.activeState);
     }
 
 }
