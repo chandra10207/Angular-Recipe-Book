@@ -16,6 +16,9 @@ export class ServersService {
       status: 'offline'
     }
   ];
+  constructor() {
+
+  }
 
   getServers() {
     return this.servers;
