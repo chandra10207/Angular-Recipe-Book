@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 // import {HttpModule} from '@angular/http';
 
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -24,6 +23,7 @@ import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import ShoppingListService from "./shopping-list/shopping-list.service";
+
 import {AppRoutingModule} from "./app-routing.module";
 import {RoutingComponent} from "./routing/routing.component";
 import {HomeComponent} from "./routing/home/home.component";
@@ -70,7 +70,7 @@ import {ServersService} from "./routing/servers/servers.service";
     BrowserModule,
     FormsModule,
     // HttpModule,
-    // AppRoutingModule
+    AppRoutingModule
   ],
   providers: [AccountService,LoggingService,ShoppingListService],
   bootstrap: [AppComponent]
