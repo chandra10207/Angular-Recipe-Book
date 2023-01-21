@@ -3,7 +3,11 @@ import { Component, EventEmitter,Output } from "@angular/core";
 
 @Component({
     selector: 'app-header',
-    templateUrl: './header.component.html'
+    templateUrl: './header.component.html',
+  styles: [
+    'h1 { font-weight: normal; }',
+    '.dropdown.show .dropdown-menu{ display: block !important;}',
+  ]
 })
 export class HeaderComponent{
 

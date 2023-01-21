@@ -19,4 +19,15 @@ export default class ShoppingListService{
     // console.log(this.ingredients)
   }
 
+  addIngredients(ingredients: Ingredient[]){
+
+    // for (let ingredient of ingredients){
+    //   this.AddIngredient(ingredient);
+    // }
+
+    this.ingredients.push(...ingredients); // Spread operator ES6
+    this.ingredientChanged.emit(this.ingredients);
+
+  }
+
 }
