@@ -24,6 +24,15 @@ import {AccountService} from "./services/account.service";
 import {LoggingService} from "./services/logging.service";
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import ShoppingListService from "./shopping-list/shopping-list.service";
+import {AppRoutingModule} from "./app-routing.module";
+import {RoutingComponent} from "./routing/routing.component";
+import {HomeComponent} from "./routing/home/home.component";
+import {ServersComponent} from "./routing/servers/servers.component";
+import {UserComponent} from "./routing/users/user/user.component";
+import {EditServerComponent} from "./routing/servers/edit-server/edit-server.component";
+import {UsersComponent} from "./routing/users/users.component";
+import {ServerComponent} from "./routing/servers/server/server.component";
+import {ServersService} from "./routing/servers/servers.service";
 
 @NgModule({
   declarations: [
@@ -43,7 +52,19 @@ import ShoppingListService from "./shopping-list/shopping-list.service";
     ServicesDependancyInjectionComponent,
     AccountComponent,
     NewAccountComponent,
-    RecipeBookComponent
+    RecipeBookComponent,
+
+    RoutingComponent,
+    HomeComponent,
+    ServersComponent,
+    ServerComponent,
+    UserComponent,
+    UsersComponent,
+    EditServerComponent,
+
+
+
+    // AppRoutingModule,
   ],
   imports: [
     BrowserModule,
