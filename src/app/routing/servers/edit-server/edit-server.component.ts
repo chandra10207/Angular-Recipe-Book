@@ -16,8 +16,8 @@ export class EditServerComponent implements OnInit {
 
   ngOnInit() {
     // this.server = this.serversService.getServer(1);
-    this.serverName = this.server.name;
-    this.serverStatus = this.server.status;
+    // this.serverName = this.server.name;
+    // this.serverStatus = this.server.status;
   }
 
   onUpdateServer() {
