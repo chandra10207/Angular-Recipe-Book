@@ -31,7 +31,7 @@ import {ServersComponent} from "./routing/servers/servers.component";
 import {UserComponent} from "./routing/users/user/user.component";
 import {EditServerComponent} from "./routing/servers/edit-server/edit-server.component";
 import {UsersComponent} from "./routing/users/users.component";
-import {ServerComponent} from "./routing/servers/server/server.component";
+import {ServerComponentItem} from "./routing/servers/server/server.component";
 import {ServersService} from "./routing/servers/servers.service";
 
 @NgModule({
@@ -57,7 +57,8 @@ import {ServersService} from "./routing/servers/servers.service";
     RoutingComponent,
     HomeComponent,
     ServersComponent,
-    ServerComponent,
+    ServerComponentItem,
+    // ServerComponent,
     UserComponent,
     UsersComponent,
     EditServerComponent,

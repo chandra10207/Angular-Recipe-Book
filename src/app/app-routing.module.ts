@@ -6,6 +6,7 @@ import {ServersComponent} from "./routing/servers/servers.component";
 import {RecipeBookComponent} from "./recipe-book/recipe-book.component";
 import {UserComponent} from "./routing/users/user/user.component";
 import {EditServerComponent} from "./routing/servers/edit-server/edit-server.component";
+import {ServerComponentItem} from "./routing/servers/server/server.component";
 
 const routes: Routes = [
   {path: '', component: RecipeBookComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent},
   {path: 'users/:id/:name', component: UserComponent},
   {path: 'servers', component:ServersComponent},
+  {path: 'servers/:id', component:ServerComponentItem},
   {path: 'servers/:id/edit', component:EditServerComponent}
 ];
 
